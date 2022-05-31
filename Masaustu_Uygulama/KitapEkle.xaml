@@ -1,0 +1,44 @@
+﻿<Window x:Class="Masaustu_Uygulama.KitapEkle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Masaustu_Uygulama"
+        mc:Ignorable="d"
+        Title="KitapEkle" Height="450" Width="800">
+    <Grid Background="WhiteSmoke">
+        <Label Content="Adı:" HorizontalAlignment="Left" Margin="99,40,0,0" VerticalAlignment="Top" Height="27" Width="35" RenderTransformOrigin="0.863,0.58"/>
+        <Label Content="Yazar:" HorizontalAlignment="Left" Margin="94,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.564,0.513"/>
+        <Label Content="Baskı Yılı:" HorizontalAlignment="Left" Margin="76,104,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sayfa Sayısı:" HorizontalAlignment="Left" Margin="60,139,0,0" VerticalAlignment="Top"/>
+        <Label Content="Dil:" HorizontalAlignment="Left" Margin="106,178,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.158,1.124"/>
+        <Label Content="Yayın Evi:" HorizontalAlignment="Left" Margin="76,223,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ad" HorizontalAlignment="Left" Height="23" Margin="156,35,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="279"/>
+        <TextBox x:Name="yazar" HorizontalAlignment="Left" Height="23" Margin="156,75,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="279"/>
+        <DatePicker x:Name="baskiyili" HorizontalAlignment="Left" Height="23" Margin="156,107,0,0"  VerticalAlignment="Top" Width="279"></DatePicker>
+        <ComboBox x:Name="dil" HorizontalAlignment="Left" Height="23" Margin="156,181,0,0"   VerticalAlignment="Top" Width="279">
+            <ComboBoxItem Content="Türkçe"></ComboBoxItem>
+            <ComboBoxItem Content="İngilizce"></ComboBoxItem>
+            <ComboBoxItem Content="Portekizce"></ComboBoxItem>
+            <ComboBoxItem Content="İspanyolca"></ComboBoxItem>
+        </ComboBox>
+        <TextBox x:Name="sayfasayisi" HorizontalAlignment="Left" Margin="156,135,0,0" VerticalAlignment="Top" Width="279" Height="30"></TextBox>
+        <TextBox x:Name="yayinevi" HorizontalAlignment="Left" Height="27" Margin="156,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279"/>
+        <GroupBox Header="Açıklama" HorizontalAlignment="Left" Margin="487,37,0,188" Width="239">
+            <TextBox Name="aciklama"></TextBox>
+        </GroupBox>
+        <Button Content="Kitap Ekle" Name="KtpKaydet" Click="KtpKaydet_Click" HorizontalAlignment="Left" Margin="494,238,0,0" VerticalAlignment="Top" Width="230"/>
+        <ListBox Name="lstbxVeriler"  HorizontalAlignment="Left" Height="82" Margin="140,317,0,0" VerticalAlignment="Top" Width="570" SelectionChanged="lstbxVeri_SelectionChanged"/>
+        <Button Background="White" Foreground="Black" Name="temizle" Click="temizle_Click" Content="Temizle" HorizontalAlignment="Left" Height="32" Margin="495,273,0,0" VerticalAlignment="Top" Width="110"/>
+        <Button Background="White" Foreground="Black" Name="seciliSil" Click="seciliSil_Click" Content="Seçili Sil" Height="32" Margin="612,273,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="110" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.197"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>

@@ -1,0 +1,34 @@
+﻿<Window x:Class="Masaustu_Uygulama.KayitliUyeler"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Masaustu_Uygulama"
+        mc:Ignorable="d"
+        Title="KayitliUyeler" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <DataGrid  Name="kayitliUye" AutoGenerateColumns="False" Margin="0,0,-15,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" />
+                <DataGridTextColumn Header="Adı" Binding="{Binding Adı}" />
+                <DataGridTextColumn Header="Soyadı" Binding="{Binding Soyadı}"/>
+                <DataGridTextColumn Header="E-Mail" Binding="{Binding mail}"/>
+                <DataGridTextColumn Header="Telefon" Binding="{Binding Telefon}" />
+                <DataGridTemplateColumn Header="Alış Tarihi">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding Alis}" BorderThickness="0" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Teslim Tarihi">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding Teslim}" BorderThickness="0" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
